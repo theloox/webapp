@@ -9,7 +9,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Welcome, %s", r.URL.Path[1:])
+    fmt.Fprintf(w, "Hello my baby Hello my honey, %s", r.URL.Path[1:])
 }
 
 type Message struct {
