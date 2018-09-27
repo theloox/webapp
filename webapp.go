@@ -4,6 +4,8 @@ import (
     "encoding/json"
     "fmt"
     "net/http"
+
+    "google.golang.org/appengine"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -29,8 +31,7 @@ func about (w http.ResponseWriter, r *http.Request) {
 func main() {
     http.HandleFunc("/", handler)
     http.HandleFunc("/about/", about)
-    http.ListenAndServe(":8000", nil)
+
+    appengine.Main()
 }
-
-
 
